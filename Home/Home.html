@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restoran</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="Home.css" />
+    <link rel="icon" href="../assets/images/Symbol spoon.svg" />
+    <script src="../app.js"></script>
+    <script src="./Home.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+  </head>
+  <header id="nav-bar">
+    <div class="nav-bar nav-bar-unscrolled">
+      <img src="../assets/images/logo.png" />
+      <nav>
+        <a
+          id="home"
+          class="nav-btn"
+          href="/Home/Home.html#menu-section"
+          
+          >Home</a
+        >
+        <a
+          id="contact"
+          class="nav-btn"
+          href="/Contact/Contact.html"
+          
+          >Contact</a
+        >
+        <a class="book-table-btn" href="#reservation">Book A Table</a>
+      </nav>
+      <div class="mobile-nav-menu-icon" onclick="showHideNavMobileMenu()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#5f6368"
+        >
+          <path
+            d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="mobile-nav-menu-list" id="mobile-nav-menu-list">
+      <ul>
+        <li onclick="showHideNavMobileMenu()">
+          <a
+            id="home"
+            class="nav-btn"
+            href="/Home/Home.html#menu-section"
+            onclick="setActivePage('home')"
+            >Home</a
+          >
+        </li>
+        <li onclick="showHideNavMobileMenu()">
+          <a
+            id="contact"
+            class="nav-btn"
+            href="/Contact/Contact.html"
+            onclick="setActivePage('contact')"
+            >Contact</a
+          >
+        </li>
+        <li onclick="showHideNavMobileMenu()">
+          <a class="book-table-btn" href="#reservation">Book A Table</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <body>
+    <section class="intro">
+      <div class="intro-body">
+        <div class="intro-details">
+          <h1>Enjoy Our Delicious Meal</h1>
+          <p>
+            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+            diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+            lorem sit clita duo justo magna dolore erat amet
+          </p>
+          <button>Book A Table</button>
+        </div>
+        <img
+          class="dish-image"
+          src="../assets/images/dish-pic-intro.png"
+          alt="dish picture"
+        />
+      </div>
+    </section>
+    <section class="cards section-margin">
+      <div class="card">
+        <svg
+          
+          viewBox="0 0 42 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 24C14.3438 24 9 18.6562 9 12C9 5.4375 14.3438 0 21 0C27.5625 0 33 5.4375 33 12C33 18.6562 27.5625 24 21 24ZM29.9062 27.0938C36.6562 27.375 42 32.9062 42 39.6562V43.5C42 46.0312 39.9375 48 37.5 48H4.5C1.96875 48 0 46.0312 0 43.5V39.6562C0 32.9062 5.25 27.375 12 27.0938L16.5 45L19.5 32.25L16.5 27H25.5L22.5 32.25L25.5 45L29.9062 27.0938Z"
+            fill="white"
+          />
+        </svg>
+        <h3>Master Chef</h3>
+        <p>
+          Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+        </p>
+      </div>
+      <div class="card">
+        <svg
+          
+          viewBox="0 0 39 49"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19.4062 2.5C19.5 2.875 21 11.3125 21 14.5C21 19.4688 18.375 22.9375 14.5312 24.3438L15.75 46.6562C15.75 47.9688 14.7188 49 13.5 49H7.5C6.1875 49 5.15625 47.9688 5.25 46.6562L6.375 24.3438C2.53125 22.9375 0 19.4688 0 14.5C0 11.3125 1.40625 2.875 1.5 2.5C1.78125 0.53125 5.71875 0.53125 6 2.59375V15.8125C6.09375 16.0938 7.40625 16.0938 7.5 15.8125C7.59375 13.4688 8.15625 2.78125 8.25 2.5C8.53125 0.53125 12.375 0.53125 12.6562 2.5C12.75 2.78125 13.3125 13.4688 13.4062 15.8125C13.5 16.0938 14.8125 16.0938 14.9062 15.8125V2.59375C15.1875 0.53125 19.125 0.53125 19.4062 2.5ZM30.6562 29.2188C15.9375 17.7812 28.9688 1 36.75 1C37.9688 1 39 2.03125 39 3.25V46.75C39 48.0625 37.9688 49 36.75 49H31.5C30.1875 49 29.0625 47.875 29.25 46.5625L30.6562 29.2188Z"
+            fill="#FEA116"
+          />
+        </svg>
+
+        <h3>Quality Foods</h3>
+        <p>
+          Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+        </p>
+      </div>
+      <div class="card">
+        <svg
+          
+          viewBox="0 0 55 49"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M47.25 30H19.7812L20.4375 33H45.5625C46.9688 33 48.0938 34.4062 47.7188 35.8125L47.25 38.0625C49.0312 38.9062 50.25 40.6875 50.25 42.75C50.25 45.75 47.8125 48.0938 44.9062 48C42.0938 48 39.75 45.75 39.75 42.9375C39.6562 41.4375 40.3125 40.0312 41.25 39H21.6562C22.5938 40.0312 23.25 41.3438 23.25 42.75C23.25 45.75 20.7188 48.1875 17.7188 48C15 47.9062 12.8438 45.75 12.75 43.125C12.5625 40.9688 13.6875 39.1875 15.375 38.25L8.71875 6H2.25C0.9375 6 0 5.0625 0 3.75V2.25C0 1.03125 0.9375 0 2.25 0H11.8125C12.8438 0 13.7812 0.84375 14.0625 1.875L14.9062 6H51.6562C53.1562 6 54.1875 7.40625 53.9062 8.8125L49.5 28.3125C49.2188 29.3438 48.2812 30 47.25 30ZM38.25 15.75H33.75V12C33.75 11.25 33 10.5 32.25 10.5H30.75C29.9062 10.5 29.25 11.25 29.25 12V15.75H24.75C23.9062 15.75 23.25 16.5 23.25 17.25V18.75C23.25 19.5938 23.9062 20.25 24.75 20.25H29.25V24C29.25 24.8438 29.9062 25.5 30.75 25.5H32.25C33 25.5 33.75 24.8438 33.75 24V20.25H38.25C39 20.25 39.75 19.5938 39.75 18.75V17.25C39.75 16.5 39 15.75 38.25 15.75Z"
+            fill="#FEA116"
+          />
+        </svg>
+
+        <h3>Online Order</h3>
+        <p>
+          Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+        </p>
+      </div>
+      <div class="card">
+        <svg
+          
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 19.5V30C18 31.6875 16.5938 33 15 33H13.5C10.125 33 7.5 30.375 7.5 27V22.5C7.5 19.2188 10.125 16.5 13.5 16.5H15C16.5938 16.5 18 17.9062 18 19.5ZM34.5 33H33C31.3125 33 30 31.6875 30 30V19.5C30 17.9062 31.3125 16.5 33 16.5H34.5C37.7812 16.5 40.5 19.2188 40.5 22.5V27C40.5 30.375 37.7812 33 34.5 33ZM24 0C37.3125 0 47.5312 11.1562 48 24V39.5625C48 44.25 44.1562 48 39.4688 48H22.5C19.9688 48 18 46.0312 18 43.5C18 41.0625 19.9688 39 22.5 39H25.5C27.9375 39 30 41.0625 30 43.5H39.4688C41.7188 43.5 43.5 41.8125 43.5 39.5625C43.5 39.5625 43.4062 24.2812 43.4062 24H43.5C43.5 13.3125 34.6875 4.5 24 4.5C13.2188 4.5 4.5 13.3125 4.5 24V25.5C4.5 26.3438 3.75 27 3 27H1.5C0.65625 27 0 26.3438 0 25.5V24C0.375 11.1562 10.5938 0 24 0Z"
+            fill="#FEA116"
+          />
+        </svg>
+        <h3>24/7 Service</h3>
+        <p>
+          Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+        </p>
+      </div>
+    </section>
+    <section class="about-us section-margin">
+      <div class="about-us-body">
+        <div class="pic-gallery">
+          <img
+            class="large-img-gallery about-1"
+            src="../assets/images/about-1.jpg.png"
+          />
+          <img
+            class="small-img-gallery about-2"
+            src="../assets/images/about-2.jpg.png"
+          />
+          <img
+            class="small-img-gallery about-3"
+            src="../assets/images/about-3.jpg.png"
+          />
+          <img
+            class="large-img-gallery"
+            src="../assets/images/about-4.jpg.png"
+          />
+        </div>
+        <div class="about-us-details">
+          <div class="italic-heading">
+            <p>about Us</p>
+            <hr class="horizontal-line" />
+          </div>
+          <h1 class="welcome-heading">
+            Welcome to
+            <span>  <svg
+          width="40"
+          height="40"
+              viewBox="0 0 39 49"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.4062 2.5C19.5 2.875 21 11.3125 21 14.5C21 19.4688 18.375 22.9375 14.5312 24.3438L15.75 46.6562C15.75 47.9688 14.7188 49 13.5 49H7.5C6.1875 49 5.15625 47.9688 5.25 46.6562L6.375 24.3438C2.53125 22.9375 0 19.4688 0 14.5C0 11.3125 1.40625 2.875 1.5 2.5C1.78125 0.53125 5.71875 0.53125 6 2.59375V15.8125C6.09375 16.0938 7.40625 16.0938 7.5 15.8125C7.59375 13.4688 8.15625 2.78125 8.25 2.5C8.53125 0.53125 12.375 0.53125 12.6562 2.5C12.75 2.78125 13.3125 13.4688 13.4062 15.8125C13.5 16.0938 14.8125 16.0938 14.9062 15.8125V2.59375C15.1875 0.53125 19.125 0.53125 19.4062 2.5ZM30.6562 29.2188C15.9375 17.7812 28.9688 1 36.75 1C37.9688 1 39 2.03125 39 3.25V46.75C39 48.0625 37.9688 49 36.75 49H31.5C30.1875 49 29.0625 47.875 29.25 46.5625L30.6562 29.2188Z"
+                fill="#FEA116"
+              />
+            </svg></span>
+            Restoran
+          </h1>
+          <p class="about-us-detail-para">
+            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+            diam ametdiam et eos erat ipsum et lorem et sit, sed stet lorem sit.
+            <br />
+            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+            diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+            lorem sit clita duo justo magna dolore erat amet
+          </p>
+          <div class="exp-and-master-chefs">
+            <div>
+              <hr class="vertical-line" />
+              <h1>13</h1>
+              <p>
+                Years of <br />
+                <strong>EXPERIENCE</strong>
+              </p>
+            </div>
+            <div>
+              <hr class="vertical-line" />
+              <h1>50</h1>
+              <p>
+                Popular <br />
+                <strong>MASTER CHEFS</strong>
+              </p>
+            </div>
+          </div>
+          <button class="read-more-btn">Read More</button>
+        </div>
+      </div>
+    </section>
+    <section id="menu-section" class="food-menu-section section-margin">
+      <div style="margin: auto" class="italic-heading">
+        <hr class="horizontal-line" />
+        <p>Food Menu</p>
+        <hr class="horizontal-line" />
+      </div>
+      <h1>Most Popular Items</h1>
+      <div class="menu-types">
+        <div
+          class="menu-type"
+          onclick="setSelectedMenuType('popularBreakfast')"
+        >
+          <div>
+            <img src="../assets/images/tea symbol.svg" />
+            <p>
+              Popular <br />
+              <strong>Breakfast</strong>
+            </p>
+          </div>
+          <hr id="popularBreakfast-underline" class="menu-type-underline" />
+        </div>
+        <div class="menu-type" onclick="setSelectedMenuType('specialLunch')">
+          <div>
+            <img src="../assets/images/burger sumbol.svg" />
+            <p>
+              Special <br />
+              <strong>Lunch</strong>
+            </p>
+          </div>
+          <hr id="specialLunch-underline" class="menu-type-underline" />
+        </div>
+        <div class="menu-type" onclick="setSelectedMenuType('lovelyDinner')">
+          <div>
+            <img src="../assets/images/Symbol spoon.svg" />
+            <p>
+              Lovely <br />
+              <strong>Dinner</strong>
+            </p>
+          </div>
+          <hr id="lovelyDinner-underline" class="menu-type-underline" />
+        </div>
+      </div>
+      <div id="menu-list" class="menu-list"></div>
+    </section>
+    <section id="reservation" class="reservation-section section-margin">
+      <img src="../assets/images/couple pic.png" alt="" />
+      <div class="reservation-body">
+        <div>
+        <div class="italic-heading">
+          <p>Reservation</p>
+          <hr class="horizontal-line" />
+        </div>
+        <h1>Book A Table Online</h1>
+        <form class="reservation-form" onsubmit="bookReservation(event)">
+          <div>
+            <input
+              id="name-input"
+              type="text"
+              placeholder="Your Name"
+              oninput="validateName(event.target.value)"
+              maxlength="50"
+            />
+            <p id="name-pattern-err" class="error">
+              Name can only have alphabets, hyphens and spaces
+            </p>
+            <p id="name-required-err" class="error">Name is required</p>
+          </div>
+          <div>
+            <input
+              id="email-input"
+              type="email"
+              placeholder="Your Email"
+              onblur="validateEmail(event.target.value)"
+            />
+            <p id="invalid-email-err" class="error">Invalid Email</p>
+            <p id="email-required-err" class="error">Email is required</p>
+          </div>
+          <!-- change date and time format -->
+          <div>
+            <input
+            type="datetime" 
+              id="date-input"
+              onchange="formatDate(event)"
+              onblur="validateDate(event.target.value)"
+              placeholder="Select a date"
+              onfocus="(this.type='datetime-local')"
+              onblur="if(!this.value) this.type='text'"
+              
+            />
+            <p id="date-required-err" class="error">Date is required</p>
+          </div>
+          <div class="people-count-dropdown">
+            <label for="number-of-people">No. Of People</label>
+            <select id="number-of-people">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+          <div class="special-request-input">
+            <textarea
+              id="special-request-input"
+              placeholder="Special Request"
+              maxlength="250"
+              oninput="validateSpecialRequestOrMessage(event.target.value)"
+            ></textarea>
+            <p id="message-request-pattern-err" class="error">
+              Request can only have alphabets, spaces and hyphens
+            </p>
+          </div>
+          <!-- add alert of succes use sweet alert library -->
+          <button class="book-now-btn" type="submit">Book Now</button>
+        </form>
+      </div>
+    </div>
+    </section>
+    <section class="team-members-section section-margin">
+      <div class="italic-heading">
+        <hr class="horizontal-line" />
+        <p>Team Members</p>
+        <hr class="horizontal-line" />
+      </div>
+      <h1>Our Master Chefs</h1>
+      <div class="chef-cards">
+        <div class="chef-card">
+          <img src="../assets/images/team-1.jpg.png" alt="" class="chef-img" />
+          <h3>Marco Reynolds</h3>
+          <p>Executive Chef</p>
+          <div class="social-media-div">
+            <div class="social-media-icon">
+              <img src="../assets/images/fb logo.svg" />
+            </div>
+            <div class="social-media-icon">
+              <img src="../assets/images/twitter logo.svg" />
+            </div>
+            <div class="social-media-icon">
+              <img src="../assets/images/insta logo.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="chef-card">
+          <img src="../assets/images/team-2.jpg.png" alt="" class="chef-img" />
+          <h3>Anthony Moretti</h3>
+          <p>Pastry Chef</p>
+          <div class="social-media-div">
+            <div class="social-media-icon">
+              <img src="../assets/images/fb logo.svg" />
+            </div>
+            <div class="social-media-icon">
+              <img src="../assets/images/twitter logo.svg" />
+            </div>
+            <div class="social-media-icon">
+              <img src="../assets/images/insta logo.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="chef-card">
+          <img src="../assets/images/team-3.jpg.png" alt="" class="chef-img" />
+          <h3>Miguel Fernandez</h3>
+          <p>Sous Chef</p>
+          <div class="social-media-div">
+            <div class="social-media-icon">
+              <img src="../assets/images/fb logo.svg" />
+            </div>
+            <div class="social-media-icon">
+              <img src="../assets/images/twitter logo.svg" />
+            </div>
+            <div class="social-media-icon">
+              <img src="../assets/images/insta logo.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="chef-card">
+          <img src="../assets/images/team-4.jpg.png" alt="" class="chef-img" />
+          <h3>David Kim</h3>
+          <p>Chef de Partie (Grill)</p>
+          <div class="social-media-div">
+            <div class="social-media-icon">
+              <img src="../assets/images/fb logo.svg" />
+            </div>
+            <div class="social-media-icon">
+              <img src="../assets/images/twitter logo.svg" />
+            </div>
+            <div class="social-media-icon">
+              <img src="../assets/images/insta logo.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="testimonial-section section-margin">
+      <div class="italic-heading">
+        <hr class="horizontal-line" />
+        <p>Testimonial</p>
+        <hr class="horizontal-line" />
+      </div>
+      <h1>Our Client Says</h1>
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <svg
+            height="800px"
+            width="800px"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 32 32"
+            xml:space="preserve"
+          >
+            <g>
+              <g id="right_x5F_quote">
+                <g>
+                  <path
+                    d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"
+                  />
+                  <path
+                    d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+          <p>
+            Dolor et eos labore, stet justo sed est
+            sed.Diam sed sed dolor stet amet
+            eirmod eos labore diam
+          </p>
+          <div class="client-details">
+            <img src="../assets/images/client 1.jpg" alt="" />
+            <div>
+              <h3>James Turner</h3>
+              <p>Financial Analyst</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <svg
+            height="800px"
+            width="800px"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 32 32"
+            xml:space="preserve"
+          >
+            <g>
+              <g id="right_x5F_quote">
+                <g>
+                  <path
+                    d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"
+                  />
+                  <path
+                    d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+          <p>
+            Dolor et eos labore, stet justo sed est
+sed.Diam sed sed dolor stet amet
+eirmod eos labore diam
+          </p>
+          <div class="client-details">
+            <img src="../assets/images/client 2.jpg" alt="" />
+            <div class="client-details">
+              <h3>Ethan Williams</h3>
+              <p>Marketing Consultant</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <svg
+            height="800px"
+            width="800px"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 32 32"
+            xml:space="preserve"
+          >
+            <g>
+              <g id="right_x5F_quote">
+                <g>
+                  <path
+                    d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"
+                  />
+                  <path
+                    d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+          <p>
+            Dolor et eos labore, stet justo sed est
+            sed.Diam sed sed dolor stet amet
+            eirmod eos labore diam
+          </p>
+          <div class="client-details">
+            <img src="../assets/images/client 3.jpg" alt="" />
+            <div>
+              <h3>Liam Scott</h3>
+              <p>Software Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <button id="goto-top-btn" onclick="goToTop()" class="goto-top-btn">
+      <img src="../assets/images/up arrow.svg" alt="" />
+    </button>
+  </body>
+  <footer>
+    <p>@Restoran.com, All Rights Reserved.</p>
+    <div>
+      <a>Home</a>
+      <a>Contact</a>
+    </div>
+  </footer>
+</html>

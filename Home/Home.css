@@ -1,0 +1,738 @@
+
+
+/* intro section css */
+
+
+.intro-body {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:40px;
+width:80%
+  
+}
+
+.intro-details h1,
+.intro-details p {
+  color: white;
+}
+.intro-details h1 {
+  font-size: 3.5rem;
+  font-family: 'Popin Extra Bold', sans-serif ;
+  text-align: left;
+  margin:5px 0;
+}
+.intro-details p {
+  font-family: 'Poppin Regular', sans-serif;
+  font-size: 1.4rem;
+}
+.intro-body img {
+
+  width: 90%;
+}
+.intro-details button {
+  background-color: #fea116;
+  padding: 8px 32px;
+  color: white;
+  border: 0;
+  font-family: 'Poopin Medium', sans-serif;
+  
+
+  padding:12px 24px;
+    font-size: 1.5rem;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.dish-image {
+  animation: 35s rotation linear infinite;
+}
+/* intro cards css */
+.cards {
+  
+  padding: 100px 0;
+  width: 70%;
+  display: flex;
+
+  flex-direction: column;
+  gap:20px;
+  align-items: center;
+  margin:auto
+
+}
+
+.card {
+  width: 100%;
+  height: 50%;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px lightgray;
+  padding: 16px;
+}
+.card svg path {
+  fill: #fea116;
+}
+.card svg {
+  width: 48px;
+  height: 48px;
+}
+.card h3,
+.card p {
+  color: black;
+}
+.card h3{
+  font-family: 'Poppin Bold', sans-serif;
+  font-size: 1.8rem;
+}
+.card p {
+  font-family: 'Poppin Regular';
+  font-size: 1.4rem;
+}
+.card:hover h3,
+.card:hover p {
+  color: white;
+}
+.card:hover {
+  background-color: #fea116;
+  cursor: pointer;
+  
+}
+.card:hover svg path {
+  fill: white;
+}
+
+/* about us section css */
+.about-us {
+  background-color: #f1f8ff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+  padding:60px 0
+}
+.about-us-body {
+  display: flex;
+  
+  gap: 20px;
+
+  flex-direction: column;
+    align-items: center;
+    width:90%;
+    
+
+}
+.pic-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 70%;
+  gap: 10px;
+}
+.large-img-gallery {
+  width: 100%;
+}
+.small-img-gallery {
+  width: 80%;
+}
+
+.about-2, .about-1 {
+  align-self: self-end;
+}
+.about-3, .about-1 {
+  justify-self: self-end;
+}
+
+.vertical-line {
+  border: 0;
+  border-right: 3px solid #fea116;
+  height: 60px;
+}
+.about-us-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  height: fit-content;
+}
+.welcome-heading{
+  font-family: 'Poppin Bold', sans-serif;
+  font-size: 2.5rem;
+  margin:0
+}
+.welcome-heading span svg {
+  width: 32px;
+  height: 32px;
+}
+.about-us-detail-para {
+  font-family: 'Poppin Regular', sans-serif;
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+.exp-and-master-chefs {
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+}
+.exp-and-master-chefs div {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  gap:5px
+}
+.exp-and-master-chefs h1,
+.exp-and-master-chefs p {
+  align-self: self-end;
+}
+.exp-and-master-chefs h1 {
+  font-family: 'Poppin Bold', sans-serif;
+  font-size: 4.8rem;
+  color: #fea116;
+  margin:0 auto;
+}
+.exp-and-master-chefs p {
+  font-family: "Poppin Regular";
+  font-size: 1.6rem;
+  margin-left: 10px;
+}
+.read-more-btn {
+  background-color: #fea116;
+  border: 0;
+  color: white;
+  border-radius: 2px;
+  font-family: 'Poppin Medium', sans-serif;
+  font-size: 1.6rem;
+  padding: 16px 0;
+  width:40%;
+  height: fit-content;
+  margin-top:5%
+}
+
+/* menu css */
+
+#special-lunch,
+#lovely-dinner {
+  display: none;
+}
+.food-menu-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+}
+.food-menu-section h1{
+    margin: auto;
+    font-family: 'Poppin Bold', sans-serif;
+    font-size: 2.8rem;
+}
+.menu-types{
+    display: flex;
+    
+    margin: auto;
+    width:90%
+}
+.menu-type{
+  width:33%;
+}
+.menu-type:hover {
+  cursor:pointer
+}
+.menu-type div {
+    display: flex;
+    gap:10%;
+    justify-content: center;
+    padding:0 3%;
+}
+.menu-type p {
+  font-family: 'Poppin Regular', sans-serif;
+  font-size: 1.5rem;
+}
+.menu-type:first-of-type .menu-type-underline{
+    border-bottom: 3px solid #fea116;
+}
+.menu-type-underline {
+    border:0;
+    border-bottom: 3px solid #dee2e6;
+    width:100%
+}
+.menu-list{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+
+    margin:auto;
+    
+    gap:0 5%
+}
+.menu-item {
+    display: flex;
+    gap:5%;
+    align-items: center;
+}
+.menu-item img{
+    width:80px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.food-details {
+    display:flex;
+    flex-direction: column;
+    width:100%
+}
+.food-details p {
+  font-family: "Poppin Regular";
+  font-size: 1.6rem;
+  color:#666565;
+
+}
+.food-name-and-price{
+    display:grid;
+    grid-template-columns: 80% 20%;
+    border-bottom: 2px solid #DEE2E6;
+    height: fit-content;
+}
+.food-name-and-price h3{
+  font-family: 'Poppin Bold', sans-serif;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+}
+.food-name-and-price h3:last-of-type{
+    color:#fea116;
+    text-align: right;
+}
+
+/* Reservation section css */
+.reservation-section{
+  display: flex;
+    flex-direction: column;
+    
+    
+}
+.reservation-section img {
+    width:100%;
+    height:100%
+}
+.reservation-form {
+  display:flex;
+  flex-direction: column;
+  width:100%;
+gap:10px
+
+    
+    
+}
+.reservation-form input,
+.reservation-form textarea {
+  font-family: 'Poppin Regular', sans-serif;
+    padding:15px 10px;
+    box-sizing: border-box;
+    width:100%;
+}
+.people-count-dropdown{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: fit-content;
+  padding: 9px 10px; 
+  max-width:100%
+}
+.people-count-dropdown label {
+  font-family: 'Poppin Regular', sans-serif;
+  font-size: 1.2rem;
+  color: gray;
+}
+.people-count-dropdown select {
+  border: 0;
+}
+.book-now-btn{
+    background-color: #fea116;
+    color:white;
+    border:0;
+    grid-row: 4;
+    height: fit-content;
+
+    padding: 10px ;
+    grid-column: 1/-1;
+}
+.book-now-btn:hover {
+  cursor: pointer;
+}
+.reservation-form .special-request-input {
+  grid-column: 1/-1;
+    width:100%
+}
+.reservation-body{
+    background-color:#0F172B;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:0%
+}
+.reservation-body h3 {
+    color: #fea116;
+}
+.reservation-body h1 {
+  font-family: 'Poppin Bold', sans-serif;
+  font-size: 2.8rem;
+    color: white;
+    margin:0
+}
+
+
+/* team members section css */
+
+.team-members-section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-members-section h1 {
+  font-family: 'Poppin Bold', sans-serif;
+  font-size: 2.8rem;
+  margin-top: 0;
+}
+
+.chef-cards{
+    width:80%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:auto;
+    gap:30px
+}
+.chef-card{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    box-shadow: 0 0 10px lightgray;
+    gap:5px;
+    align-items: center;
+    height: 100%;
+    padding:20px 20px 0 20px
+}
+.chef-card h3{
+  font-family: 'Poppin Bold', sans-serif;
+  font-size: 2rem;
+  margin:0;
+  
+
+}
+.chef-card p{
+  font-family: 'Poppin Regular', sans-serif;
+  font-size: 1.4rem;
+  color:#666565;
+  margin: 0;
+  margin-bottom:15px
+}
+.chef-img{
+    width:65%;
+    border-radius: 50%;
+
+}
+.social-media-icon{
+  background-color: #fea116;
+  padding: 10px;
+  border-radius: 20px 20px 0 0;
+  
+}
+.social-media-div{
+  display: none;
+  gap:0 10%;
+  
+  margin-bottom: 0;
+  margin-left:-10%
+}
+.chef-card:hover .social-media-div{
+  display: flex;
+  transition: 2s display linear;
+}
+.chef-card:hover{
+  cursor:pointer
+}
+
+/* testimonial section css */
+
+.testimonial-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonial-section h1 {
+  font-family: 'Poppin Bold', sans-serif;
+  font-size: 2.8rem;
+  margin-top:0
+}
+.testimonial-cards{
+  flex-direction: column;
+    width: 80%;
+    gap:20px;
+    align-items: center;
+    margin:auto;
+
+  display:flex;
+  
+}
+.testimonial-card {
+
+  width:95%;
+  padding:25px;
+
+  box-shadow: 0 0 10px lightgray;
+  
+  height: 100%;
+  
+}
+.testimonial-card svg {
+  width:16px;
+  height:16px;
+  transform: rotateY(180deg);
+  fill: #fea116;
+}
+.testimonial-card:hover {
+  background-color: #fea116;
+}
+.testimonial-card:hover p,
+.testimonial-card:hover h3
+ {
+  color:white
+}
+.testimonial-card:hover svg{
+  fill:white
+}
+.testimonial-card p {
+  font-family: 'Poppin Regular', sans-serif;
+  font-size: 1.4rem;
+}
+
+.client-details{
+  display: flex;
+  gap:5%
+}
+.client-details img{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+}
+.client-details div {
+  display: flex;
+  flex-direction: column;
+}
+.client-details h3,
+.client-details p{
+  margin:1% 0;
+  text-align: left;
+  font-family: 'Poppin Regular', sans-serif;
+}
+.client-details h3{
+  font-size: 1.6rem;
+}
+.client-details p {
+  font-size: 1.2rem;
+}
+
+
+.swal2-styled.swal2-confirm {
+  background: none !important;
+  background-color: #fea116!important;
+  
+}
+.swal2-icon.swal2-success .swal2-success-ring {
+ 
+  border: .25em solid rgba(254, 161, 22,0.3) !important;
+ 
+}
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+ 
+  background-color: #fea116 !important;
+}
+.swal2-title, .swal2-html-container {
+  font-family: 'Poppin Regular', sans-serif
+}
+
+.italic-heading p{
+  margin:0
+}
+
+
+/* mobile responsiveness */
+
+@media screen and (min-width:992px) {
+  .intro-body{
+    padding-top:initial;
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 70%;
+  align-items: center;
+
+  gap: 5%;
+  padding:80px 0
+  }
+  .intro-details h1 {
+    font-size: 6.2rem;
+  }
+  .intro-details p,
+  .card p {
+    font-size: 1.6rem;
+  }
+  .intro-details button {
+    font-size: 1.6rem;
+  padding:16px 48px
+  }
+  .intro-body img {
+    width: 80%;
+  }
+  .cards{
+    flex-direction:row;
+    align-items:initial;
+    justify-content:center;
+    gap: 3%;
+    width:80%
+  }
+  
+  
+  .card:hover {
+    scale: 108%;
+  }
+  .card h3 {
+    font-size: 2rem;
+  }
+  .about-us-body{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    width: 70%;
+    
+  }
+  .about-us-details {
+    width:100%
+  }
+  .welcome-heading {
+    font-size: 4rem;
+  }
+  
+  .food-menu-section h1 {
+    font-size: 4rem;
+  }
+  .menu-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    width:60%;
+  }
+  .menu-types{
+    width:35%
+  }
+  .menu-type p {
+    font-size: 1.6rem;
+  }
+  .reservation-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .reservation-form{
+    width:90%;
+    gap:5% 10%;
+    padding:25px 0;
+
+
+  }
+  .chef-cards {
+    flex-direction: row;
+    gap:20px;
+    align-items: initial;
+    justify-content: center;
+    margin:auto
+  }
+  .chef-card {
+    width:100%;
+  }
+  .testimonial-cards {
+    flex-direction: row;
+    width:60%;
+  gap:10%;
+  align-items:initial;
+  justify-content:center;
+  margin:initial
+  }
+  .testimonial-card {
+    width:33%;
+  padding:25px
+  }
+  .exp-and-master-chefs{
+    flex-direction: row;
+  }
+  .exp-and-master-chefs div{
+    align-items: center;
+  }
+  .exp-and-master-chefs h1 {
+    
+    font-size: 4rem;
+  }
+  .read-more-btn{
+    width:25%
+  }
+  .about-us-detail-para,
+  .exp-and-master-chefs p,
+  .read-more-btn{
+    font-size: 1.4rem;
+  }
+  .card svg {
+    width:40px;
+    height: 40px;
+  }
+  .food-name-and-price h3{
+    font-size:  2rem;
+  }
+  .food-details p {
+    font-size: 1.4rem;
+  }
+  .menu-item{
+    gap:5%
+  }
+  .reservation-body h1 {
+    font-size: 4rem;
+  }
+  .reservation-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: repeat(4,1fr);
+  }
+  .team-members-section h1,
+  .testimonial-section h1{
+    font-size: 4rem;
+  }
+  .chef-img{
+    width:80%;
+    padding:initial
+  }
+  .chef-card p {
+    margin-top:2px;
+
+  }
+  .chef-card{
+    padding:8px 8px 0px 8px 
+  }
+  .pic-gallery {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:900px) {
+
+  .chef-card {
+    width:70%
+  }
+  .intro-body img {
+    width:60%
+  }
+  
+  
+}

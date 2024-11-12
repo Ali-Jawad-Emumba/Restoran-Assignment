@@ -1,0 +1,237 @@
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 10px;
+}
+
+.section-margin {
+  margin-bottom: 60px;
+}
+/* header (navbar) CSS */
+.nav-bar {
+  height: 60px;
+  display: grid;
+  grid-template-columns: 70% 10%;
+  background-color: #272f41;
+  padding:5px 20px;
+
+
+  width: 100vw;
+  position: fixed;
+  
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: 500ms background-color linear;
+}
+
+.nav-bar img {
+  
+
+  width:150px;margin:0
+}
+nav {
+  margin: auto;
+  
+  display: none;
+}
+.nav-bar-unscrolled .nav-btn {
+  color: white;
+}
+.nav-bar-scrolled .nav-btn {
+  color: black;
+}
+
+.nav-btn {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 48px;
+  align-content: center;
+  font-family: "Poppin Regular";
+}
+
+.nav-btn:hover {
+  color: #fea116;
+}
+.book-table-btn {
+  background-color: #fea116;
+  border: 0;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 2px;
+  gap: 10px;
+  font-family: "Poppin Regular";
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.mobile-nav-menu-icon {
+  display: block;
+
+  border-radius: 5px;
+  border: 2px dashed gray;
+  width: fit-content;
+  padding: 3px 5px;
+}
+.mobile-nav-menu-list {
+  display: none;
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  padding: 10px 0 20px 0;
+  box-shadow: 0 0 10px lightgray;
+}
+.mobile-nav-menu-list ul {
+  list-style: none;
+}
+.mobile-nav-menu-list ul li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+/* footer css */
+
+footer {
+  height: 50%;
+  background-color: #272f41;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  
+  gap:10%;
+  flex-direction: column;
+  padding:10px 0
+}
+footer p,
+footer a {
+  color: white;
+  font-family: "Poppin Regular", sans-serif;
+  font-size: 1.4rem;;
+}
+footer a {
+  text-decoration: none;
+}
+
+footer div {
+  display: flex;
+  gap: 15%;
+}
+
+.intro {
+  background-image: url("assets/images/background-image.png");
+  padding: 40px 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-blend-mode: overlay;
+  background-color: rgb(15, 22, 42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.horizontal-line {
+  border: 0;
+  border-bottom: 3px solid #fea116;
+  width: 50px;
+  margin: 0;
+}
+.italic-heading {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.italic-heading p {
+  font-family: "Pacifico", sans-serif;
+  color: #fea116;
+  font-size: 2rem;
+}
+.error {
+  display: none;
+  color: #ff0000;
+  font-family: "Poppin Regular", sans-serif;
+  font-size: 1rem;
+}
+.goto-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  background-color: #fea116;
+  border: 0;
+  border-radius: 5px;
+  height: 40px;
+  width: 40px;
+}
+.goto-top-btn:hover {
+  cursor: pointer;
+}
+
+/* fonts */
+@font-face {
+  font-family: "Poppin Regular";
+  src: url(assets/font/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppin Medium";
+  src: url(assets/font/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "Poppin Bold";
+  src: url(assets/font/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppin Extra Bold";
+  src: url(assets/font/Poppins-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Pacifico";
+  src: url(assets/font/Pacifico-Regular.ttf);
+}
+
+/* mobile responsiveness */
+
+@media screen and (min-width: 992px) {
+  .nav-bar {
+    height: 70px;
+    grid-template-columns: 50% 50%;
+    background-color:transparent;
+    padding: 8px 16px;
+  }
+  .nav-bar-unscrolled {
+    background-color: transparent;
+  }
+  .nav-bar-scrolled {
+    background-color: white;
+    box-shadow: 0 0 10px lightgray;
+  }
+  .nav-bar img {
+    width:30%;
+    margin: auto;
+  }
+  .mobile-nav-menu-icon {
+    display: none;
+  }
+  nav {
+    display: block;
+  }
+  
+  footer {
+    gap: 50%;
+    padding:initial;
+    flex-direction:row;
+  
+  }
+}
+
