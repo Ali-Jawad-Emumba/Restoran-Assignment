@@ -17,12 +17,11 @@ html {
   display: grid;
   grid-template-columns: 70% 10%;
   background-color: #272f41;
-  padding:5px 20px;
-
+  padding: 5px 20px;
 
   width: 100vw;
   position: fixed;
-  
+
   align-items: center;
   justify-content: center;
   z-index: 999;
@@ -30,20 +29,13 @@ html {
 }
 
 .nav-bar img {
-  
-
-  width:150px;margin:0
+  width: 150px;
+  margin: 0;
 }
 nav {
   margin: auto;
-  
+
   display: none;
-}
-.nav-bar-unscrolled .nav-btn {
-  color: white;
-}
-.nav-bar-scrolled .nav-btn {
-  color: black;
 }
 
 .nav-btn {
@@ -54,11 +46,11 @@ nav {
   line-height: 48px;
   align-content: center;
   font-family: "Poppin Regular";
+  color:#fea116
+
 }
 
-.nav-btn:hover {
-  color: #fea116;
-}
+
 .book-table-btn {
   background-color: #fea116;
   border: 0;
@@ -75,7 +67,6 @@ nav {
   display: block;
 
   border-radius: 5px;
-  border: 2px dashed gray;
   width: fit-content;
   padding: 3px 5px;
 }
@@ -105,16 +96,16 @@ footer {
   justify-content: center;
   display: flex;
   align-items: center;
-  
-  gap:10%;
+
+  gap: 10%;
   flex-direction: column;
-  padding:10px 0
+  padding: 10px 0;
 }
 footer p,
 footer a {
   color: white;
   font-family: "Poppin Regular", sans-serif;
-  font-size: 1.4rem;;
+  font-size: 1.4rem;
 }
 footer a {
   text-decoration: none;
@@ -206,7 +197,7 @@ footer div {
   .nav-bar {
     height: 70px;
     grid-template-columns: 50% 50%;
-    background-color:transparent;
+    background-color: transparent;
     padding: 8px 16px;
   }
   .nav-bar-unscrolled {
@@ -216,22 +207,33 @@ footer div {
     background-color: white;
     box-shadow: 0 0 10px lightgray;
   }
+  .nav-bar-unscrolled .nav-btn {
+    color: white;
+  }
+  .nav-bar-scrolled .nav-btn {
+    color: black;
+  }
+ 
+  .nav-btn:hover {
+    color: #fea116;
+  }
   .nav-bar img {
-    width:30%;
+    width: 30%;
     margin: auto;
   }
   .mobile-nav-menu-icon {
     display: none;
   }
+  .mobile-nav-menu-list {
+    display: none!important;
+  }
   nav {
     display: block;
   }
-  
+
   footer {
     gap: 50%;
-    padding:initial;
-    flex-direction:row;
-  
+    padding: initial;
+    flex-direction: row;
   }
 }
-

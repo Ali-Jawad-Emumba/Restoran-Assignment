@@ -1,6 +1,6 @@
 let selectedMenuType = "popularBreakfast";
-let isReservationFormValid=false
-let isEmailValid
+let isReservationFormValid = false;
+let isEmailValid;
 
 const menuItems = {
   lovelyDinner: [
@@ -37,19 +37,19 @@ const menuItems = {
 
 document.addEventListener("DOMContentLoaded", () => {
   updateMenuList();
-const today = new Date().toISOString().split('T')[0];
-document.getElementById('date-input').setAttribute('min', today);
-setActivePage('home')
+  const today = new Date().toISOString().split("T")[0];
+  document.getElementById("date-input").setAttribute("min", today);
+  setActivePage("home");
 });
 
-
-const setSelectedMenuType=(menuType)=>{
+const setSelectedMenuType = (menuType) => {
   selectedMenuType = menuType;
   updateMenuList();
-}
+};
 
-const updateMenuList=()=>{
-  let menuItemsHtml = menuItems[selectedMenuType].map((menuItem, index) => (`<div class="menu-item">
+const updateMenuList = () => {
+  let menuItemsHtml = menuItems[selectedMenuType].map(
+    (menuItem, index) => `<div class="menu-item">
             <img src="../assets/images/menu-${index + 1}.jpg.png" alt="" />
             <div class="food-details">
               <div class="food-name-and-price"> 
@@ -59,55 +59,57 @@ const updateMenuList=()=>{
               <p>Ipsum ipsum clita erat amet dolor justo diam</p>
             </div>
           </div>
-          `)
+          `
   );
   document.getElementById("menu-list").innerHTML = menuItemsHtml.join("");
 
-  markUnderlines(selectedMenuType)
-}
-const markUnderlines=(selectedMenuType)=>{
+  markUnderlines(selectedMenuType);
+};
+const markUnderlines = (selectedMenuType) => {
   document.getElementById(`${selectedMenuType}-underline`).style.borderColor =
-  "#fea116";
-  markOthersLineGray(selectedMenuType)
-}
+    "#fea116";
+  markOthersLineGray(selectedMenuType);
+};
 
 //mark the underline of other elemnts expect of the provided type to gray
-const markOthersLineGray=(currentType)=>{
-  const typesToUnderline=Object.keys(menuItems).filter(type=>type!==currentType)
-  typesToUnderline.forEach(type=>document.getElementById(`${type}-underline`).style.borderColor =
-  "lightgray")
-}
+const markOthersLineGray = (currentType) => {
+  const typesToUnderline = Object.keys(menuItems).filter(
+    (type) => type !== currentType
+  );
+  typesToUnderline.forEach(
+    (type) =>
+      (document.getElementById(`${type}-underline`).style.borderColor =
+        "lightgray")
+  );
+};
 
+const bookReservation = (event) => {
+  event.preventDefault();
+  const name = document.getElementById("name-input").value;
+  const email = document.getElementById("email-input").value;
+  const request = document.getElementById("special-request-input").value;
+  const date = document.getElementById("date-input").value;
 
-const bookReservation=(event)=>{
-    event.preventDefault()
-    const name=document.getElementById('name-input').value
-    const email=document.getElementById('email-input').value
-    const request=document.getElementById('special-request-input').value
-    const date=document.getElementById('date-input').value
+  validateName(name);
+  validateEmail(email);
+  validateSpecialRequestOrMessage(request);
+  validateDate(date);
 
-    validateName(name)
-    validateEmail(email)
-    validateSpecialRequestOrMessage(request)
-    validateDate(date)
-
-    if (name && email && isEmailValid && date){
-        Swal.fire({
-            title: "Reservation Booked",
-            icon: "success"
-          });
-    }
+  if (name && email && isEmailValid && date) {
+    Swal.fire({
+      title: "Reservation Booked",
+      icon: "success",
+    });
   }
-    const formatDate=(event)=>{
-  const dateTime=event.target.value
-  console.log(dateTime)
-  const [date,time]=dateTime.split('T');
-  const [year,month,day]=date.split('-');
-  document.getElementById("date-input").type='text'
+};
+const formatDate = (event) => {
+  const dateTime = event.target.value;
+  console.log(dateTime);
+  const [date, time] = dateTime.split("T");
+  const [year, month, day] = date.split("-");
+  document.getElementById("date-input").type = "text";
 
-  document.getElementById("date-input").value=`${day}/${month}/${year}, ${time}`
-
-
-
-
-}
+  document.getElementById(
+    "date-input"
+  ).value = `${day}/${month}/${year}, ${time}`;
+};

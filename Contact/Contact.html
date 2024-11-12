@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Restoran</title>
-        <link rel="stylesheet" href="../styles.css" />
-        <link rel="stylesheet" href="Contact.css" />
-        <link rel="icon" href="../assets/images/Symbol spoon.svg"/>
-        <script src="../app.js"></script>
-        <script src="./Contact.js"></script>
-
-      </head>
-      <header id="nav-bar">
-        <div  class="nav-bar nav-bar-unscrolled">
-        <img src="../assets/images/logo.png" />
-        <nav>
-            <a id="home" class="nav-btn" href="/Home/Home.html#menu-section" onclick="setActivePage('home')">Home</a>
-            <a id="contact" class="nav-btn"href="/Contact/Contact.html" onclick="setActivePage('contact')">Contact</a>
-          <a class="book-table-btn" href="/Home/Home.html#reservation">Book A Table</a>
-        </nav>
-        <div class="mobile-nav-menu-icon" onclick="showHideNavMobileMenu()">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restoran</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="Contact.css" />
+    <link rel="icon" href="../assets/images/Symbol spoon.svg" />
+    <script src="../app.js"></script>
+    <script src="./Contact.js"></script>
+  </head>
+  <header id="nav-bar">
+    <div class="nav-bar nav-bar-unscrolled">
+      <img src="../assets/images/logo.png" />
+      <nav>
+        <a
+          id="home"
+          class="nav-btn"
+          href="/Home/Home.html#menu-section"
+          onclick="setActivePage('home')"
+          >Home</a
+        >
+        <a
+          id="contact"
+          class="nav-btn"
+          href="/Contact/Contact.html"
+          onclick="setActivePage('contact')"
+          >Contact</a
+        >
+        <a class="book-table-btn" href="/Home/Home.html#reservation"
+          >Book A Table</a
+        >
+      </nav>
+      <div class="mobile-nav-menu-icon" onclick="showHideNavMobileMenu()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="24px"
@@ -36,20 +49,12 @@
     <div class="mobile-nav-menu-list" id="mobile-nav-menu-list">
       <ul>
         <li onclick="showHideNavMobileMenu()">
-          <a
-            id="home"
-            class="nav-btn"
-            href="/Home/Home.html#menu-section"
-            
+          <a id="home" class="nav-btn" href="/Home/Home.html#menu-section"
             >Home</a
           >
         </li>
         <li onclick="showHideNavMobileMenu()">
-          <a
-            id="contact"
-            class="nav-btn"
-            href="/Contact/Contact.html"
-            
+          <a id="contact" class="nav-btn" href="/Contact/Contact.html"
             >Contact</a
           >
         </li>
@@ -58,82 +63,116 @@
         </li>
       </ul>
     </div>
-      </header>
-<body>
+  </header>
+  <body>
     <section class="intro section-margin">
-        <h1>Contact Us</h1>
-        <p class="current-path">HOME / <span>CONTACT</span></p>
+      <h1>Contact Us</h1>
+      <p class="current-path">HOME / <span>CONTACT</span></p>
     </section>
     <section class="contact-us-section section-margin">
-        <div class="italic-heading"><hr class="horizontal-line"><p>Contact Us</p><hr class="horizontal-line"></div>
-        <h1>Contact For Any Query</h1>
-        <div class="contact-emails">
-            <div class="email">
-                <div class="italic-heading">
-                    <p>Booking</p>
-                    <hr class="horizontal-line">
-                </div>
-                <div>
-                    <img src="../assets/images/email icon.svg" alt="">
-                    <p>booking@restoran.com</p> 
-                </div>
-            </div>
-            <div class="email">
-                <div class="italic-heading">
-                    <p>General</p>
-                    <hr class="horizontal-line">
-                </div>
-                <div>
-                    <img src="../assets/images/email icon.svg" alt="">
-                    <p>general@restoran.com</p> 
-                </div>
-            </div>
-            <div class="email">
-                <div  class="italic-heading">
-                    <p>Technical</p>
-                    <hr class="horizontal-line">
-                </div>
-                <div>
-                    <img src="../assets/images/email icon.svg" alt="">
-                    <p>tech@restoran.com</p> 
-                </div>
-            </div>
+      <div class="italic-heading">
+        <hr class="horizontal-line" />
+        <p>Contact Us</p>
+        <hr class="horizontal-line" />
+      </div>
+      <h1>Contact For Any Query</h1>
+      <div class="contact-emails">
+        <div class="email">
+          <div class="italic-heading">
+            <p>Booking</p>
+            <hr class="horizontal-line" />
+          </div>
+          <div>
+            <img src="../assets/images/email icon.svg" alt="" />
+            <p>booking@restoran.com</p>
+          </div>
         </div>
-        <div class="contact-map-and-form">
-            
-                <img class="contact-map" src="../assets/images/map pic.png" alt="">                
-            
-            <form class="contact-form" onsubmit="submitMessage(event)">
-                <div>
-                <input id="name-input" type="text" placeholder="Your Name" oninput="validateName(event.target.value)" maxlength="50">
-                <p id="name-pattern-err" class="error">Name can only have alphabets, spaces and hyphens</p>
-                <p id="name-required-err" class="error">Name is required</p>
-            </div>
-            <div>
-                <input id="email-input" type="email" placeholder="Your Email" onblur="validateEmail(event.target.value)">
-                <p id="invalid-email-err" class="error">Invalid Email</p>
-                <p id="email-required-err" class="error">Email is required</p>
-            </div>
-            <div class="subject-input">
-                <input id="subject-input" type="text" placeholder="Subject" maxlength="100" oninput="validateSubject(event.target.value)">
-                <p id="subject-pattern-err" class="error">Subject can only have alphabets, spaces and hyphens</p>
-                <p id="subject-required-err" class="error">Subject is required</p>
-            </div>   
-                
-                <div class="message"><textarea id="message" placeholder="Message" maxlength="250" oninput="validateSpecialRequestOrMessage(event.target.value)"></textarea>
-                    <p id="message-request-pattern-err" class="error">Message can only have alphabets, spaces and hyphens</p></div>
-                <button class="submit-btn" type="submit">Submit</button>
-            </form>
+        <div class="email">
+          <div class="italic-heading">
+            <p>General</p>
+            <hr class="horizontal-line" />
+          </div>
+          <div>
+            <img src="../assets/images/email icon.svg" alt="" />
+            <p>general@restoran.com</p>
+          </div>
         </div>
+        <div class="email">
+          <div class="italic-heading">
+            <p>Technical</p>
+            <hr class="horizontal-line" />
+          </div>
+          <div>
+            <img src="../assets/images/email icon.svg" alt="" />
+            <p>tech@restoran.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map-and-form">
+        <img class="contact-map" src="../assets/images/map pic.png" alt="" />
+
+        <form class="contact-form" onsubmit="submitMessage(event)">
+          <div>
+            <input
+              id="name-input"
+              type="text"
+              placeholder="Your Name"
+              oninput="validateName(event.target.value)"
+              maxlength="50"
+            />
+            <p id="name-pattern-err" class="error">
+              Name can only have alphabets, spaces and hyphens
+            </p>
+            <p id="name-required-err" class="error">Name is required</p>
+          </div>
+          <div>
+            <input
+              id="email-input"
+              type="email"
+              placeholder="Your Email"
+              onblur="validateEmail(event.target.value)"
+            />
+            <p id="invalid-email-err" class="error">Invalid Email</p>
+            <p id="email-required-err" class="error">Email is required</p>
+          </div>
+          <div class="subject-input">
+            <input
+              id="subject-input"
+              type="text"
+              placeholder="Subject"
+              maxlength="100"
+              oninput="validateSubject(event.target.value)"
+            />
+            <p id="subject-pattern-err" class="error">
+              Subject can only have alphabets, spaces and hyphens
+            </p>
+            <p id="subject-required-err" class="error">Subject is required</p>
+          </div>
+
+          <div class="message">
+            <textarea
+              id="message"
+              placeholder="Message"
+              maxlength="250"
+              oninput="validateSpecialRequestOrMessage(event.target.value)"
+            ></textarea>
+            <p id="message-request-pattern-err" class="error">
+              Message can only have alphabets, spaces and hyphens
+            </p>
+          </div>
+          <button class="submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
     </section>
     <button id="goto-top-btn" onclick="goToTop()" class="goto-top-btn">
-        <img src="../assets/images/up arrow.svg" alt="">
-            </button>
-</body>
-<footer>
+      <img src="../assets/images/up arrow.svg" alt="" />
+    </button>
+  </body>
+  <footer>
     <p>@Restoran.com, All Rights Reserved.</p>
-    <div><a>Home</a>
-    <a>Contact</a>
-  </div>
+    <div>
+      <a>Home</a>
+      <a>Contact</a>
+    </div>
   </footer>
 </html>

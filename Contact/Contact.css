@@ -1,199 +1,180 @@
-.nav-btn:last-of-type {
-    color:#fea116
-  }
-.intro h1{
-    color:white;
-    font-family: 'Popping Extra Bold', sans-serif;
-    
-    font-size: 3.2rem;
-        margin:0
+
+.intro h1 {
+  color: white;
+  font-family: "Popping Extra Bold", sans-serif;
+
+  font-size: 3.2rem;
+  margin: 0;
 }
 .current-path span {
-    color:#fea116
+  color: #fea116;
 }
-.current-path{
-    color:white
+.current-path {
+  color: white;
 }
 
-.intro{
-    flex-direction: column;
-    padding: 100px 0; 
+.intro {
+  flex-direction: column;
+  padding: 100px 0;
 
-    justify-content: start;
-    
+  justify-content: start;
 }
-.contact-us-heading{
-    display: flex;
-    align-items: center;
-    width:15%
+.contact-us-heading {
+  display: flex;
+  align-items: center;
+  width: 15%;
 }
 .contact-us-heading p {
-    font-family: 'Pacifico', sans-serif;
-    color:#fea116;
-    font-size: 2rem;
+  font-family: "Pacifico", sans-serif;
+  color: #fea116;
+  font-size: 2rem;
 }
 .contact-us-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: content-box;
-
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: content-box;
 }
 .contact-us-section h1 {
-    font-family: 'Popping Extra Bold', sans-serif;
-    font-size: 2.8rem;
-    margin-top: 0;
-    
+  font-family: "Popping Extra Bold", sans-serif;
+  font-size: 2.8rem;
+  margin-top: 0;
 }
 .intro p {
-    font-family: 'Poppin Medium', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 400;
+  font-family: "Poppin Medium", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
-.contact-emails{
-    display: flex;
-    flex-direction: column;
-    align-items: space-evenly;
-    width:80%;
-    margin-bottom: 30px;
+.contact-emails {
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  width: 80%;
+  margin-bottom: 30px;
 }
-.email div{
-    display:flex;
-    align-items: center;
+.email div {
+  display: flex;
+  align-items: center;
 }
 .email div,
 .email p {
-    margin:2%
+  margin: 2%;
 }
 
 .email div:last-of-type p {
-    font-family: 'Poppin Regular', sans-serif;
-    font-size: 1.6rem;
-    color:#666565;
-
+  font-family: "Poppin Regular", sans-serif;
+  font-size: 1.6rem;
+  color: #666565;
 }
-.contact-map-and-form{
-
-    display:flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        gap:10px 0
-
-    
+.contact-map-and-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  gap: 10px 0;
 }
-.contact-map{
-    width:100%;
-    height:100%;
-    margin: auto;
+.contact-map {
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
-.contact-form{
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin: auto;
 
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    width: 100%;
-    margin:auto;
-
-    
-    max-height: 300px;
-    
+  max-height: 300px;
 }
 .contact-form input,
-.contact-form textarea{
-    border-radius: 2px;
-    border-width: 1px;
-    padding: 15px 10px ;
-    border: 1px solid #CED4DA;
-    border-radius: 2px;
-    width:100%;
-    box-sizing: border-box;
-    
+.contact-form textarea {
+  border-radius: 2px;
+  border-width: 1px;
+  padding: 15px 10px;
+  border: 1px solid #ced4da;
+  border-radius: 2px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .contact-form textarea {
-height: 50px;
+  height: 100px;
 }
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    font-family: 'Popping Regular', sans-serif;
-    
-    color:#666565
+  font-family: "Popping Regular", sans-serif;
+
+  color: #666565;
 }
-.subject-input{
-    grid-column: 1/-1;
+.subject-input {
+  grid-column: 1/-1;
 }
-.message{
-    grid-row: 3;
-    grid-column: 1/-1;
+.message {
+  grid-row: 3;
+  grid-column: 1/-1;
 }
 .submit-btn {
-    grid-column: 1/-1;
-    background-color: #fea116;
-    border: 0;
-    color:white;
-    width:100%;
-    height: fit-content;
-    padding:12px 24px
+  grid-column: 1/-1;
+  background-color: #fea116;
+  border: 0;
+  color: white;
+  width: 100%;
+  height: fit-content;
+  padding: 12px 24px;
 }
-.submit-btn:hover{
-cursor:pointer
+.submit-btn:hover {
+  cursor: pointer;
 }
 
-@media screen and (min-width:992px) {
-
-    .intro h1 {
-        font-size: 4rem;
+@media screen and (min-width: 992px) {
+  .intro h1 {
+    font-size: 4rem;
     margin-top: 0;
-    margin:initial
-    }
-    .intro p {
-        font-size: 1.6rem;
-    }
-    .contact-us-section h1{
-        font-size: 4rem;
-    }
-    .contact-emails{
-        flex-direction: row;
-        align-items: initial;
-        justify-content: space-evenly;
-    }
-    .contact-map-and-form {
-        width:60%;
+    margin: initial;
+  }
+  .intro p {
+    font-size: 1.6rem;
+  }
+  .contact-us-section h1 {
+    font-size: 4rem;
+  }
+  .contact-emails {
+    flex-direction: row;
+    align-items: initial;
+    justify-content: space-evenly;
+  }
+  .contact-map-and-form {
+    width: 60%;
     display: grid;
     grid-template-columns: 50% 50%;
-    align-items:initial;
-    justify-content:center;
-    gap:5%
-    }
-    .contact-form {
-        display: grid;
+    align-items: initial;
+    justify-content: center;
+    gap: 5%;
+  }
+  .contact-form {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
-    width:initial;
+    width: initial;
     height: 100%;
-    gap:5% 10%;
-    margin:initial;
-    
-        
-    }
-    .contact-form input,
-    .contact-form textarea{
-        width:100%
-    }
-    .contact-map{
+    gap: 5% 10%;
+    margin: initial;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+  .contact-map {
+    margin: initial;
+  }
 
-        margin: initial;
-        
-    }
-     
-    .intro{
-        padding-top:10%;
-        padding-bottom: 10%; 
-    }
+  .intro {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
 }
-@media screen and (min-width:768px) and (max-width:900px){
-    .email div{
-        margin:0
-    }
-}  
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .email div {
+    margin: 0;
+  }
+}
