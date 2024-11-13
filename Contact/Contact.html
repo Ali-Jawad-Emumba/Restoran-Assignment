@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restoran</title>
     <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="Contact.css" />
+    <link rel="stylesheet" href="contact.css" />
     <link rel="icon" href="../assets/images/Symbol spoon.svg" />
     <script src="../app.js"></script>
-    <script src="./Contact.js"></script>
+    <script src="./contact.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
 
   </head>
@@ -19,18 +19,18 @@
         <a
           id="home"
           class="nav-btn"
-          href="/Home/Home.html#menu-section"
+          href="/home/home.html#menu-section"
           onclick="setActivePage('home')"
           >Home</a
         >
         <a
           id="contact"
           class="nav-btn"
-          href="/Contact/Contact.html"
+          href="/contact/contact.html"
           onclick="setActivePage('contact')"
           >Contact</a
         >
-        <a class="book-table-btn" href="/Home/Home.html#reservation"
+        <a class="book-table-btn" href="/home/home.html#reservation"
           >Book A Table</a
         >
       </nav>
@@ -51,17 +51,17 @@
     <div class="mobile-nav-menu-list" id="mobile-nav-menu-list">
       <ul>
         <li onclick="showHideNavMobileMenu()">
-          <a id="home" class="nav-btn" href="/Home/Home.html#menu-section"
+          <a id="home" class="nav-btn" href="/home/home.html#menu-section"
             >Home</a
           >
         </li>
         <li onclick="showHideNavMobileMenu()">
-          <a id="contact" class="nav-btn" href="/Contact/Contact.html"
+          <a id="contact" class="nav-btn" href="/contact/contact.html"
             >Contact</a
           >
         </li>
         <li onclick="showHideNavMobileMenu()">
-          <a class="book-table-btn" href="#reservation">Book A Table</a>
+          <a class="book-table-btn" href="/home/home.html#reservation">Book A Table</a>
         </li>
       </ul>
     </div>
@@ -111,7 +111,7 @@
         </div>
       </div>
       <div class="contact-map-and-form">
-        <img class="contact-map" src="../assets/images/map pic.png" alt="" />
+        <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d387191.33750346623!2d-73.979681!3d40.6974881!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1731494827839!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         <form class="contact-form" onsubmit="submitMessage(event)">
           <div>
