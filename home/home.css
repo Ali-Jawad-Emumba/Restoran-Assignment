@@ -187,9 +187,9 @@
 }
 .exp-and-master-chefs h1 {
   font-family: "Poppin Bold", sans-serif;
-  font-size: 4.8rem;
+  font-size: 3.8rem;
   color: #fea116;
-  margin: 0 auto;
+  margin: auto;
 }
 .exp-and-master-chefs p {
   font-family: "Poppin Regular";
@@ -637,6 +637,7 @@
   }
   .exp-and-master-chefs h1 {
     font-size: 4rem;
+    margin: 0 auto;
   }
   .read-more-btn {
     width: 25%;
