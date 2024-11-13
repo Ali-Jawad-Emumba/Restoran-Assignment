@@ -318,6 +318,7 @@
   width: 100%;
   gap: 10px;
 }
+
 .reservation-form input,
 .reservation-form textarea {
   font-family: "Poppin Regular", sans-serif;

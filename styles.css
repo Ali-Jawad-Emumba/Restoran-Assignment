@@ -46,10 +46,8 @@ nav {
   line-height: 48px;
   align-content: center;
   font-family: "Poppin Regular";
-  color:#fea116
-
+  color: #fea116;
 }
-
 
 .book-table-btn {
   background-color: #fea116;
@@ -153,6 +151,8 @@ footer div {
   color: #ff0000;
   font-family: "Poppin Regular", sans-serif;
   font-size: 1rem;
+  margin-top: 2px;
+  margin-bottom: 0;
 }
 .goto-top-btn {
   display: none;
@@ -168,7 +168,6 @@ footer div {
 .goto-top-btn:hover {
   cursor: pointer;
 }
-
 
 .swal2-styled.swal2-confirm {
   background: none !important;
@@ -229,7 +228,7 @@ footer div {
   .nav-bar-scrolled .nav-btn {
     color: black;
   }
- 
+
   .nav-btn:hover {
     color: #fea116;
   }
@@ -241,7 +240,7 @@ footer div {
     display: none;
   }
   .mobile-nav-menu-list {
-    display: none!important;
+    display: none !important;
   }
   nav {
     display: block;
