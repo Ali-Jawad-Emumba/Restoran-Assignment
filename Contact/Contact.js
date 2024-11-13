@@ -19,6 +19,8 @@ const submitMessage = (event) => {
     Swal.fire({
       title: "Message Send",
       icon: "success",
+      timer: 3000,
+      showConfirmButton: false,
     });
 }
 }
