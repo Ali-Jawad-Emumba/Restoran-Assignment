@@ -28,19 +28,18 @@
 }
 .intro-details a {
   background-color: #fea116;
-  text-decoration: none;  
+  text-decoration: none;
   color: white;
   border: 0;
   font-family: "Poopin Medium", sans-serif;
   padding: 12px 24px;
   font-size: 1.5rem;
-  width:fit-content
+  width: fit-content;
 }
 .intro-details {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  gap:10px;
-
+  gap: 10px;
 }
 @keyframes rotation {
   0% {
@@ -523,7 +522,6 @@
 .client-details p {
   font-size: 1.2rem;
 }
-
 
 .italic-heading p {
   margin: 0;
