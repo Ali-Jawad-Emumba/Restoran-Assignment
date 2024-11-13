@@ -169,6 +169,22 @@ footer div {
   cursor: pointer;
 }
 
+
+.swal2-styled.swal2-confirm {
+  background: none !important;
+  background-color: #fea116 !important;
+}
+.swal2-icon.swal2-success .swal2-success-ring {
+  border: 0.25em solid rgba(254, 161, 22, 0.3) !important;
+}
+.swal2-icon.swal2-success [class^="swal2-success-line"] {
+  background-color: #fea116 !important;
+}
+.swal2-title,
+.swal2-html-container {
+  font-family: "Poppin Regular", sans-serif;
+}
+
 /* fonts */
 @font-face {
   font-family: "Poppin Regular";

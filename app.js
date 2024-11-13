@@ -1,4 +1,10 @@
 const regexAlphabetsPattern = /^[A-Za-z\s-]+$/;
+let isValid={
+  email:false,
+  name:false,
+  specialReqOrMsg:true,
+  subject:false
+}
 
 const setActivePage = (page) => {
   document.getElementById(page).style.color = "#fea116";
@@ -20,25 +26,26 @@ const validateName = (name) => {
   const patternError = document.getElementById("name-pattern-err");
   const requiredError = document.getElementById("name-required-err");
   requiredError.style.display = !name ? "block" : "none";
-  showHidePatternError(patternError, name);
+  showHidePatternError(patternError, name,'name');
 };
 const validateSubject = (subject) => {
   const patternError = document.getElementById("subject-pattern-err");
   const requiredError = document.getElementById("subject-required-err");
   requiredError.style.display = !subject ? "block" : "none";
-  showHidePatternError(patternError, subject);
+  showHidePatternError(patternError, subject, 'subject');
 };
 const validateEmail = (email) => {
   const invalidErr = document.getElementById("invalid-email-err");
   const requiredErr = document.getElementById("email-required-err");
   const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   requiredErr.style.display = !email ? "block" : "none";
-  showHidePatternError(invalidErr, email, regex);
+  showHidePatternError(invalidErr, email, 'email', regex);
 };
 
 const validateSpecialRequestOrMessage = (value) => {
   const patternErr = document.getElementById("message-request-pattern-err");
-  showHidePatternError(patternErr, value);
+  if (value){
+  showHidePatternError(patternErr, value, 'specialReqOrMsg');}
 };
 
 const validateDate = (date) => {
@@ -49,8 +56,11 @@ const validateDate = (date) => {
 const showHidePatternError = (
   errorElement,
   varToCheck,
+  validCheckToUpdate=null,
   regex = regexAlphabetsPattern
+ 
 ) => {
+  if (validCheckToUpdate){isValid[validCheckToUpdate]=regex.test(varToCheck)}
   if (varToCheck) {
     errorElement.style.display = !regex.test(varToCheck) ? "block" : "none";
   } else {

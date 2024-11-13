@@ -1,6 +1,6 @@
 let selectedMenuType = "popularBreakfast";
 let isReservationFormValid = false;
-let isEmailValid;
+
 
 const menuItems = {
   lovelyDinner: [
@@ -95,7 +95,8 @@ const bookReservation = (event) => {
   validateSpecialRequestOrMessage(request);
   validateDate(date);
 
-  if (name && email && isEmailValid && date) {
+  const shallShowPopup=[name, isValid.name, email, isValid.email, date, isValid.specialReqOrMsg].every(check=>check)
+  if (shallShowPopup) {
     Swal.fire({
       title: "Reservation Booked",
       icon: "success",

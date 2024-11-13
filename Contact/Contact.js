@@ -13,4 +13,12 @@ const submitMessage = (event) => {
   validateEmail(email);
   validateSpecialRequestOrMessage(message);
   validateSubject(subject);
-};
+
+  const shallShowPopup=[name, isValid.name, email, isValid.email, subject, isValid.subject, isValid.specialReqOrMsg].every(check=>check)
+  if (shallShowPopup) {
+    Swal.fire({
+      title: "Message Send",
+      icon: "success",
+    });
+}
+}

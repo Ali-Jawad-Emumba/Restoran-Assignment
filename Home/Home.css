@@ -26,15 +26,21 @@
 .intro-body img {
   width: 90%;
 }
-.intro-details button {
+.intro-details a {
   background-color: #fea116;
-  padding: 8px 32px;
+  text-decoration: none;  
   color: white;
   border: 0;
   font-family: "Poopin Medium", sans-serif;
-
   padding: 12px 24px;
   font-size: 1.5rem;
+  width:fit-content
+}
+.intro-details {
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+
 }
 @keyframes rotation {
   0% {
@@ -48,7 +54,7 @@
   animation: 35s rotation linear infinite;
 }
 /* intro cards css */
-.cards {
+.intro-cards {
   padding: 100px 0;
   width: 70%;
   display: flex;
@@ -59,41 +65,41 @@
   margin: auto;
 }
 
-.card {
+.intro-card {
   width: 100%;
   height: 50%;
   border-radius: 2px;
   box-shadow: 0px 0px 10px lightgray;
   padding: 16px;
 }
-.card svg path {
+.intro-card svg path {
   fill: #fea116;
 }
-.card svg {
+.intro-card svg {
   width: 48px;
   height: 48px;
 }
-.card h3,
-.card p {
+.intro-card h3,
+.intro-card p {
   color: black;
 }
-.card h3 {
+.intro-card h3 {
   font-family: "Poppin Bold", sans-serif;
   font-size: 1.8rem;
 }
-.card p {
+.intro-card p {
   font-family: "Poppin Regular";
   font-size: 1.4rem;
 }
-.card:hover h3,
-.card:hover p {
+.intro-card:hover h3,
+.intro-card:hover p {
   color: white;
 }
-.card:hover {
+.intro-card:hover {
   background-color: #fea116;
   cursor: pointer;
 }
-.card:hover svg path {
+.intro-card:hover svg path {
   fill: white;
 }
 
@@ -518,20 +524,6 @@
   font-size: 1.2rem;
 }
 
-.swal2-styled.swal2-confirm {
-  background: none !important;
-  background-color: #fea116 !important;
-}
-.swal2-icon.swal2-success .swal2-success-ring {
-  border: 0.25em solid rgba(254, 161, 22, 0.3) !important;
-}
-.swal2-icon.swal2-success [class^="swal2-success-line"] {
-  background-color: #fea116 !important;
-}
-.swal2-title,
-.swal2-html-container {
-  font-family: "Poppin Regular", sans-serif;
-}
 
 .italic-heading p {
   margin: 0;
@@ -554,17 +546,17 @@
     font-size: 6.2rem;
   }
   .intro-details p,
-  .card p {
+  .intro-card p {
     font-size: 1.6rem;
   }
-  .intro-details button {
+  .intro-details a {
     font-size: 1.6rem;
     padding: 16px 48px;
   }
   .intro-body img {
     width: 80%;
   }
-  .cards {
+  .intro-cards {
     flex-direction: row;
     align-items: initial;
     justify-content: center;
@@ -572,10 +564,10 @@
     width: 80%;
   }
 
-  .card:hover {
+  .intro-card:hover {
     scale: 108%;
   }
-  .card h3 {
+  .intro-card h3 {
     font-size: 2rem;
   }
   .about-us-body {
@@ -610,8 +602,11 @@
     grid-template-columns: 50% 50%;
   }
   .reservation-form {
-    width: 90%;
-    gap: 5% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: repeat(4, 1fr);
+    width: 70%;
+    gap: 5%;
     padding: 25px 0;
   }
   .chef-cards {
@@ -653,7 +648,7 @@
   .read-more-btn {
     font-size: 1.4rem;
   }
-  .card svg {
+  .intro-card svg {
     width: 40px;
     height: 40px;
   }
@@ -669,11 +664,7 @@
   .reservation-body h1 {
     font-size: 4rem;
   }
-  .reservation-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row: repeat(4, 1fr);
-  }
+
   .team-members-section h1,
   .testimonial-section h1 {
     font-size: 4rem;
@@ -689,7 +680,7 @@
     padding: 8px 8px 0px 8px;
   }
   .pic-gallery {
-    width: 100%;
+    width: 90%;
   }
 }
 
