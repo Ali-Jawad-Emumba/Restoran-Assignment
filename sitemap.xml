@@ -1,9 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"> 
 <url>
-	<loc>https://restoran-azure-iota.vercel.app/</loc>
-	<lastmod>2025-01-02T14:20:04+01:00</lastmod>
-	<priority>1.0</priority>
+<loc>https://restoran-azure-iota.vercel.app/home/home.html.html</loc>
 </url>
 </urlset>
